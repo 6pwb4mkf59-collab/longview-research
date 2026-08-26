@@ -1,65 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Long View Research</title>
-    <style>
-        body {
-            background-color: #f7f7f5;
-            color: #666666;
-            font-family: "Georgia", "Times New Roman", "Source Han Serif SC", "Noto Serif CJK SC", "STSong", "SimSun", serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            -webkit-font-smoothing: antialiased;
-        }
-        .content {
-            text-align: center;
-            padding: 20px;
-        }
-        h1 {
-            color: #333333;
-            font-weight: 400;
-            font-size: 1.8rem;
-            letter-spacing: 0.15rem;
-            margin-bottom: 0.8rem;
-            line-height: 1.4;
-        }
-        .subtitle {
-            font-style: italic;
-            font-size: 1.1rem;
-            margin-bottom: 3.5rem;
-            opacity: 0.8;
-            line-height: 1.6;
-        }
-        .date {
-            font-size: 0.75rem;
-            letter-spacing: 0.2rem;
-            text-transform: uppercase;
-            color: #999999;
-        }
-        .zh-text {
-            font-style: normal;
-            letter-spacing: 0.1rem;
-            display: block;
-            margin-top: 0.3rem;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Long View Research is an independent research practice concerned with how value takes shape across business and culture.">
+  <title>Long View Research</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background-color: #f7f7f5;
+      color: #666666;
+      font-family: "Georgia", "Times New Roman", "Source Han Serif SC",
+                   "Noto Serif CJK SC", "STSong", "SimSun", serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    .page {
+      width: min(880px, calc(100% - 48px));
+      min-height: 100vh;
+      margin: 0 auto;
+      padding: 12vh 0 8vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .header {
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      color: #333333;
+      font-weight: 400;
+      font-size: 1.8rem;
+      letter-spacing: 0.15rem;
+      line-height: 1.4;
+    }
+
+    .zh-title {
+      display: block;
+      margin-top: 0.3rem;
+      font-size: 1.5rem;
+      font-weight: 500;
+      letter-spacing: 0.1rem;
+    }
+
+    .intro {
+      max-width: 720px;
+      margin: 3.4rem auto 0;
+      font-size: 1rem;
+      line-height: 1.85;
+      text-align: center;
+    }
+
+    .research {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      margin-top: 4.8rem;
+      padding-top: 3rem;
+      border-top: 1px solid #ddddda;
+    }
+
+    .research-item {
+      text-align: left;
+    }
+
+    .research-item h2 {
+      margin: 0;
+      color: #333333;
+      font-size: 1.08rem;
+      font-weight: 400;
+      letter-spacing: 0.06rem;
+    }
+
+    .research-item .question {
+      margin: 0.7rem 0 1.3rem;
+      color: #777777;
+      font-size: 0.96rem;
+      font-style: italic;
+      line-height: 1.55;
+    }
+
+    .research-item .description {
+      margin: 0;
+      font-size: 0.94rem;
+      line-height: 1.8;
+    }
+
+    .epigraph {
+      margin-top: 4.8rem;
+      padding-top: 3rem;
+      border-top: 1px solid #ddddda;
+      text-align: center;
+    }
+
+    .epigraph p {
+      margin: 0;
+    }
+
+    .quote-zh {
+      color: #555555;
+      font-size: 1rem;
+      letter-spacing: 0.08rem;
+    }
+
+    .source {
+      margin-top: 0.45rem !important;
+      color: #999999;
+      font-size: 0.78rem;
+      font-style: italic;
+    }
+
+    .quote-en {
+      max-width: 650px;
+      margin: 2.1rem auto 0 !important;
+      color: #666666;
+      font-size: 0.94rem;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+      .page {
+        width: min(100% - 36px, 880px);
+        padding: 9vh 0 7vh;
+        justify-content: flex-start;
+      }
+
+      .intro {
+        margin-top: 2.8rem;
+        text-align: left;
+      }
+
+      .research {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        margin-top: 3.8rem;
+        padding-top: 2.5rem;
+      }
+
+      .epigraph {
+        margin-top: 3.8rem;
+        padding-top: 2.5rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <div class="content">
-        <h1>
-            Long View Research<br>
-            <span style="font-size: 1.5rem; font-weight: 500;">执中研究</span>
-        </h1>
-        <div class="subtitle">
-            Delving into Enduring Forms<br>
-            <span class="zh-text">惟精惟一，允执厥中。</span>
-        </div>
-        <div class="date">since 2026</div>
-    </div>
+  <main class="page">
+
+    <header class="header">
+      <h1>
+        Long View Research
+        <span class="zh-title">执中研究</span>
+      </h1>
+
+      <p class="intro">
+        Long View Research is an independent research practice concerned with how value takes shape across business and culture.
+        Spanning applied and historical research, it examines the creation, analysis, preservation, and transmission of value over time.
+      </p>
+    </header>
+
+    <section class="research" aria-label="Research areas">
+
+      <div class="research-item">
+        <h2>Applied Research</h2>
+
+        <p class="question">
+          How value is created and analyzed.
+        </p>
+
+        <p class="description">
+          Bespoke research on businesses, markets, and capital allocation,
+          developed through a long-term and independent perspective.
+        </p>
+      </div>
+
+      <div class="research-item">
+        <h2>Historical Research</h2>
+
+        <p class="question">
+          How value is preserved and transmitted.
+        </p>
+
+        <p class="description">
+          Independent research on the history of value analysis,
+          cultural transmission, and patronage.
+        </p>
+      </div>
+
+    </section>
+
+    <section class="epigraph" aria-label="Epigraph">
+
+      <p class="quote-zh">
+        惟精惟一，允执厥中。
+      </p>
+
+      <p class="source">
+        《尚书·大禹谟》
+      </p>
+
+      <p class="quote-en">
+        Be discriminating, be undivided, that you may sincerely hold fast the Mean.
+      </p>
+
+      <p class="source">
+        James Legge, trans., <em>The Shoo King</em>
+      </p>
+
+    </section>
+
+  </main>
 </body>
 </html>
